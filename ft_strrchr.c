@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*smot;
-	size_t	i;
-	unsigned char uc;
+	char			*smot;
+	size_t			i;
+	unsigned char	uc;
 
 	smot = (char *)s;
 	uc = (unsigned char)c;
