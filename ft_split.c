@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 12:47:21 by radib             #+#    #+#             */
-/*   Updated: 2025/04/21 14:30:34 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/22 13:32:38 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,18 @@ static char	**words_malloc(char const *s, char c, char **ptr_split)
 	{
 		while (s[i] == c && !(s[i] == c && s[i + 1] == '\0'))
 			i++;
-		if (s[i + 1] == '\0')
-		{
-			words_count--;
+		if (s[i] == '\0')
 			break ;
-		}
 		words_count++;
 		j = i;
 		while (s[i] && s[i] != c)
 			i++;
 		ptr_split[words_count - 1] = malloc(sizeof(char) * (i - j + 1));
 		if (!ptr_split[words_count - 1])
-			while (words_count-- && words_count - 1 > 0)
+			while (words_count-- && words_count > 0)
 				free(ptr_split[words_count]);
+		if (i == j)
+			break ;
 	}
 	return (ptr_split);
 }
@@ -105,24 +104,24 @@ char	**ft_split(char const *s, char c)
 	return (ptr_split);
 }
 
-int	main(void)
-{
-	char	**ptr_split;
-	int		i;
+// int	main(void)
+// {
+// 	char	**ptr_split;
+// 	int		i;
 
-	i = 0;
-	ptr_split =  ft_split("mi.", 'i');
-	while (ptr_split[i])
-	{
-		printf("%s\n", ptr_split[i]);
-		i++;
-	}
-	i = 0;
-	while (ptr_split[i])
-	{
-		printf("ptrsplit[%d] : %s\n", i, ptr_split[i]);
-		free(ptr_split[i]);
-		i++;
-	}
-	free(ptr_split);
-}
+// 	i = 0;
+// 	ptr_split = ft_split("idiiqiliidi", 'i');
+// 	while (ptr_split[i])
+// 	{
+// 		printf("%s\n", ptr_split[i]);
+// 		i++;
+// 	}
+// 	i = 0;
+// 	while (ptr_split[i])
+// 	{
+// 		printf("ptrsplit[%d] : %s\n", i, ptr_split[i]);
+// 		free(ptr_split[i]);
+// 		i++;
+// 	}
+// 	free(ptr_split);
+// }
