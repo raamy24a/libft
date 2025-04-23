@@ -29,7 +29,7 @@ char	*ft_strchr(const char *s, int c)
 			return (mot_final + i);
 		i++;
 	}
-	if (c == '\0')
+	if (uc == '\0')
 		return (mot_final + i);
 	return (NULL);
 }

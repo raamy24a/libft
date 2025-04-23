@@ -28,8 +28,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		i++;
 		smot++;
 	}
-	if (cc == '\0' && i > 0)
-		return (smot);
 	return (NULL);
 }
 // #include <stdio.h>
