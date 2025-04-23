@@ -1,50 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 21:56:58 by radib             #+#    #+#             */
-/*   Updated: 2025/04/16 14:55:40 by radib            ###   ########.fr       */
+/*   Created: 2025/04/23 13:34:31 by radib             #+#    #+#             */
+/*   Updated: 2025/04/23 15:24:10 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlen(const char *str)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
+	t_list	*i_list;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(const char *s)
-{
-	int		s_len;
-	char	*s_dup;
-	int		i;
-
-	s_len = ft_strlen(s);
-	s_dup = malloc(sizeof(char) * s_len + 1);
-	if (!s_dup)
+	i_list = malloc(sizeof(t_list));
+	if (!i_list)
 		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		s_dup[i] = s[i];
-		i++;
-	}
-	s_dup[i] = '\0';
-	return (s_dup);
+	i_list -> content = content;
+	i_list -> next = NULL;
+	return (i_list);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_strdup("bonjour"));
-}
-*/
