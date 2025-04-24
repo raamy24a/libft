@@ -6,12 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 14:01:31 by radib             #+#    #+#             */
-/*   Updated: 2025/04/16 15:17:43 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:51:46 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 // char	f(unsigned int i, char c)
 // {

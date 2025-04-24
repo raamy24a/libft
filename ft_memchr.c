@@ -6,11 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 17:04:00 by radib             #+#    #+#             */
-/*   Updated: 2025/04/16 15:48:50 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:49:11 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

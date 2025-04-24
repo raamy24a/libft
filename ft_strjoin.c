@@ -6,12 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 11:15:57 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 10:13:45 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:51:13 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

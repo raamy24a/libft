@@ -6,13 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 18:13:03 by radib             #+#    #+#             */
-/*   Updated: 2025/04/17 14:28:21 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:43:59 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {

@@ -6,12 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:04:42 by radib             #+#    #+#             */
-/*   Updated: 2025/04/16 15:16:16 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:50:20 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 static int	ten_pow(int pow)
 {

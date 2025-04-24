@@ -6,12 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 12:47:21 by radib             #+#    #+#             */
-/*   Updated: 2025/04/22 13:32:38 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:50:44 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static char	**array_words_malloc(char const *s, char c)
 {

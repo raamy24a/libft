@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/14 10:53:56 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 13:50:28 by radib            ###   ########.fr       */
+/*   Created: 2025/04/24 13:26:06 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 13:39:43 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	i;
+	t_list	*temp;
 
-	i = 0;
-	while (s[i])
+	temp = lst;
+	while (temp)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		f (temp -> content);
+		temp = temp -> next;
 	}
 }
-/*
-int	main(void)
-{
-	ft_putstr_fd("bonjour", 1);
-	return (0);
-}
-*/

@@ -6,12 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 17:11:13 by radib             #+#    #+#             */
-/*   Updated: 2025/04/18 14:29:43 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:52:38 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_isnbrnegative(int n)
 {
@@ -51,7 +50,7 @@ static int	ft_itoasize(int n)
 	return (i);
 }
 
-char	*ft_strcpy(char *dst, const char *src)
+static char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 

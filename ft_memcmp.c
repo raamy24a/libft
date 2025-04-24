@@ -6,11 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 17:15:19 by radib             #+#    #+#             */
-/*   Updated: 2025/04/16 16:18:05 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:49:34 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,11 +6,10 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 21:56:58 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 10:17:44 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:50:57 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

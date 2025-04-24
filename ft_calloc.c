@@ -6,12 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 21:09:32 by radib             #+#    #+#             */
-/*   Updated: 2025/04/18 18:02:44 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 13:44:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_calloc(size_t nb, size_t size)
 {

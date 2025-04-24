@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:16:29 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 12:20:18 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/24 14:53:53 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst)
 	{
-		temp = (*lst)->next;
-		if (!temp)
-			return ;
+		temp = *lst;
+		*lst = temp->next;
 		del(temp->content);
-		free(*lst);
-		*lst = NULL;
+		free(temp);
 	}
+	lst = NULL;
 }
