@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 21:56:58 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 10:17:44 by radib            ###   ########.fr       */
+/*   Created: 2025/04/24 10:32:49 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 10:55:28 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int		s_len;
-	char	*s_dup;
-	int		i;
+	t_list	*temp;
 
-	s_len = ft_strlen(s);
-	s_dup = malloc(sizeof(char) * s_len + 1);
-	if (!s_dup)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		s_dup[i] = s[i];
-		i++;
-	}
-	s_dup[i] = '\0';
-	return (s_dup);
+	temp = ft_lstlast(*lst);
+	if (!temp)
+		*lst = new;
+	temp -> next = new;
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_strdup("bonjour"));
-}
-*/

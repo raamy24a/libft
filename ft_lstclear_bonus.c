@@ -1,43 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 13:08:06 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 10:28:17 by radib            ###   ########.fr       */
+/*   Created: 2025/04/24 11:16:29 by radib             #+#    #+#             */
+/*   Updated: 2025/04/24 12:20:18 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	char	*ptr_src;
-	char	*ptr_dest;
-	size_t	i;
+	t_list	*temp;
 
-	ptr_src = (char *)src;
-	ptr_dest = (char *)dest;
-	if (!ptr_dest && !ptr_src)
-		return (NULL);
-	i = 0;
-	while (i < n)
+	if (!lst)
+		return ;
+	while (*lst)
 	{
-		ptr_dest[i] = ptr_src[i];
-		i++;
+		temp = (*lst)->next;
+		if (!temp)
+			return ;
+		del(temp->content);
+		free(*lst);
+		*lst = NULL;
 	}
-	return (dest);
 }
-/*
-int	main(void)
-{
-	char	src[] = "BONJOUR";
-
-	char dest[] ="bonjour";
-	printf("%s\n%s\n", dest ,src);
-	ft_memcpy(dest, src, 7);
-	printf("%s\n%s\n", dest ,src);
-}
-*/
