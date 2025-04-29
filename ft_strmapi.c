@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 14:01:31 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 13:51:46 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/29 12:31:21 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str_api;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
-	{
 		i++;
-	}
 	str_api = malloc(sizeof(char) * i + 1);
 	if (!str_api)
-	{
-		free(str_api);
 		return (NULL);
-	}
 	i = 0;
 	while (s[i])
 	{

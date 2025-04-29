@@ -6,13 +6,13 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 17:11:13 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 13:52:38 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/29 12:14:58 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isnbrnegative(int n)
+static int	ft_number_sign(int n)
 {
 	int	sign;
 
@@ -74,7 +74,7 @@ char	*ft_itoa(int n)
 	itoa_str = malloc(sizeof(char) * (i + 1));
 	if (!itoa_str)
 		return (NULL);
-	sign = ft_isnbrnegative(n);
+	sign = ft_number_sign(n);
 	if (n == 0)
 		return (ft_strcpy(itoa_str, "0"));
 	if (n == -2147483648)

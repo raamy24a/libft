@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:35:19 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 13:48:45 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/25 13:21:26 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	new -> next = *lst;
 	*lst = new;
 }

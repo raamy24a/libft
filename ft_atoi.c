@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 18:13:03 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 13:43:59 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/29 14:28:08 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,34 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int			i;
-	int			sign;
-	long long	total;
+	int		sign;
+	long	total;
 
-	i = 0;
 	total = 0;
 	sign = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	while ((*nptr >= 9 && *nptr <= 13) || *nptr == ' ')
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		if (nptr[i] == '-')
+		if (*nptr == '-')
 			sign *= -1;
-		i++;
+		nptr++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
 		total *= 10;
-		total += nptr[i] - '0';
-		i++;
+		total += *nptr - '0';
+		if ((total < 0) && sign == -1)
+			return (0);
+		if ((total < 0) && sign == 1)
+			return (-1);
+		nptr++;
 	}
 	return (total * sign);
 }
-/*
-int	main(void)
-{
-	printf("mon atoi : %d\n", ft_atoi("19223372036854775809"));
-	printf("vrai atoi : %d\n", atoi("19223372036854775809"));
-}
-*/
+
+// int	main(void)
+// {
+// 	printf("monn atoi : %d\n", ft_atoi("15156156159151561"));
+// 	printf("vrai atoi : %d\n", atoi("15156156159151561"));
+// }
