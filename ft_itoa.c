@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 17:11:13 by radib             #+#    #+#             */
-/*   Updated: 2025/04/29 12:14:58 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/30 12:16:13 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,8 @@ char	*ft_itoa(int n)
 		itoa_str[i - 1] = '-';
 	return (itoa_str);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_itoa(-2147483648));
-}
-	*/
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(0));
+// }

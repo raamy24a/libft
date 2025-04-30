@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 12:47:21 by radib             #+#    #+#             */
-/*   Updated: 2025/04/24 13:50:44 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/30 12:12:26 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,19 +117,19 @@ char	**ft_split(char const *s, char c)
 // 	char	**ptr_split;
 // 	int		i;
 
-// 	i = 0;
-// 	ptr_split = ft_split("hello!", ' ');
-// 	while (ptr_split[i])
+// 	ptr_split = ft_split("", ' ');
+// 	if (!ptr_split)
 // 	{
-// 		printf("%s\n", ptr_split[i]);
-// 		i++;
+// 		printf("(null)\n");
+// 		return (0);
 // 	}
 // 	i = 0;
 // 	while (ptr_split[i])
 // 	{
-// 		printf("ptrsplit[%d] : %s\n", i, ptr_split[i]);
+// 		printf("%s\n", ptr_split[i]);
 // 		free(ptr_split[i]);
 // 		i++;
 // 	}
 // 	free(ptr_split);
+// 	return (0);
 // }

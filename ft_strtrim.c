@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 11:24:44 by radib             #+#    #+#             */
-/*   Updated: 2025/04/18 17:05:32 by radib            ###   ########.fr       */
+/*   Updated: 2025/04/30 12:00:07 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str_trimmed;
 
 	i = 0;
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return ((char *)s1);
 	end = ftend(s1, set);
 	if (ft_trimm_start(s1, set) > end - 1)
 	{
@@ -74,16 +78,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str_trimmed = malloc(sizeof(char) * (end - ft_trimm_start(s1, set) + 1));
 	if (!str_trimmed)
 		return (NULL);
-	while (i < end - ft_trimm_start(s1, set))
-	{
-		str_trimmed[i] = s1[ft_trimm_start(s1, set) + i];
-		i++;
-	}
-	str_trimmed[i] = '\0';
+	while (i++ < end - ft_trimm_start(s1, set))
+		str_trimmed[i - 1] = s1[ft_trimm_start(s1, set) + i - 1];
+	str_trimmed[i - 1] = '\0';
 	return (str_trimmed);
 }
 
 // int	main(void)
 // {
-// 	printf("%s\n", ft_strtrim("abcdba", "acb"));
+// 	printf("%s\n", ft_strtrim("abcdba", NULL ));
 // }
